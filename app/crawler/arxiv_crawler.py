@@ -1,6 +1,4 @@
 import asyncio
-from unicodedata import category
-
 import aiohttp
 
 from app.parsers.listing_parser import ArxivListingParser
@@ -48,5 +46,4 @@ class ArxivCrawler:
                 if len(articles) < self.batch_size:
                     break
 
-                # Be polite to arXiv
                 await asyncio.sleep(3)
